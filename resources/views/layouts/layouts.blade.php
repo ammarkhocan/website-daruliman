@@ -6,11 +6,12 @@
         <link rel="shortcut icon" href="{{ asset('assets/icons/ic-logo-ponpes.ico') }}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+        {{-- AOS --}}
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+        {{-- Magnific --}}
+        <link rel="stylesheet" href="{{ asset('assets/css/magnific.css') }}">
         <title>Pondok Pesantren Darul Iman</title>
-
-       
     </head>
     <body>
         {{-- Navbar --}}
@@ -20,7 +21,7 @@
         @yield('content')
 
         {{-- Footer --}}
-        <section id="footer" class="bg-white" data-aos="zoom-out">
+        <section id="footer" class="bg-white">
         <div class="container py-4" >
             <footer>
                 <div class="row">
@@ -76,6 +77,13 @@
                 </div>
               </section>
               {{-- Footer --}}
+
+
+              {{-- JQuery 1.7.2 --}}
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+              <script src="{{ asset('assets/js/magnific.js') }}"></script>
+
+
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
               <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
               <script>
@@ -90,10 +98,29 @@
                         //   navbar.classList.add("navbar-dark");
                           }
                       }
-              </script>
-              <script>AOS.init();</script>   
-       </body>
-  </html>
+
+                    //   Animasi Aos
+                      AOS.init();
+                    </script> 
+                    
+                    <script>
+                        // Magnific
+                    $(document).ready(function() {
+                        $('.image-link').magnificPopup({
+                            type: 'image',
+                            retina: {
+                                ratio: 1,
+                                replaceSrc: function(item, ratio) {
+                                    return item.src.replace(/\.\w+$/, function(m) {
+                                        return '@2x' + m;
+                                    });
+                                }
+                            }
+                        });
+                    });
+                    </script>
+    </body>
+</html>
 
 
            
