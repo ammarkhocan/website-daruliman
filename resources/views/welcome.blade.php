@@ -91,7 +91,7 @@
       </div>
     </div>
     <div class="footer-berita text-center">
-      <a href="#" class="btn btn-outline-custom">Berita Lainnya</a>
+      <a href="/berita" class="btn btn-outline-custom">Berita Lainnya</a>
     </div>
   </div> 
 </section>
@@ -198,7 +198,7 @@
         <div class="fw-bold text-white">Foto Kegiatan</div>
       </div>
       <div>
-        <a href="#" class="btn btn-outline-white">Foto Lainnya</a>
+        <a href="/foto" class="btn btn-outline-white">Foto Lainnya</a>
       </div>
     </div>
     <div class="row">
