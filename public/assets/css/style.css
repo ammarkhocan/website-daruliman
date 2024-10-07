@@ -52,6 +52,7 @@ body {
 .scroll-nav-active {
     background-color: white;
     border-bottom: 2px solid #30693e;
+    box-shadow: 1px 1px 11px -1px rgba(1, 1, 1, 0.08);
 }
 
 .text-nav-active {
@@ -114,4 +115,28 @@ body {
     height: 5px;
     width: 40px;
     background-color: #ffffff;
+}
+
+/* Responsive layar kecil 450 */
+@media screen and (min-width: 450px) {
+    .hero-text {
+        font-size: 35px;
+        font-weight: 600;
+    }
+}
+
+/* Responsive layar kecil 550 */
+@media screen and (min-width: 550px) {
+    .hero-text {
+        font-size: 35px;
+        font-weight: 600;
+    }
+}
+
+/* Responsive layar kecil 800 */
+@media screen and (min-width: 800px) {
+    .hero-text {
+        font-size: 65px;
+        font-weight: 600;
+    }
 }
