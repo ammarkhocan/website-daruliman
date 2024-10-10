@@ -2,16 +2,23 @@
 
 @section('content')
 
-<section style="margin-top: 100px">
-    <div class="container py-5">
-        <h3 class="fw-bold mb-3">Halaman Management Artikel</h3>
-        <p>Atur dan kelola artikel kegiatan pesantren</p>
+<section class="py-5" style="margin-top: 100px">
+    <div class="container col">
+        <h3>Halaman Blog Artikel</h3>
 
-        <div class="d-flex">
-            <a href="{{ route('dashboard') }}">Home</a>
-            <div class="mx-1">/</div>
-            <a href="{{ route('dashboard') }}">Blog Artikel</a>
+        <a href="{{ route('blog.create') }}" class="btn btn-primary">Buat Artikel</a>
 
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Judul</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
 </section>
