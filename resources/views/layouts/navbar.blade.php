@@ -28,9 +28,19 @@
             <a class="nav-link active" href="#">kontak</a>
           </li>
         </ul>
-        <form class="d-flex">
+        <div class="d-flex">
+          @auth
+          <form action="/logout" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-dark">Logout</button>
+          </form>
+          @else
+
           <button class="btn btn-danger">Register</button>
-        </form>
+              
+          @endauth
+          
+        </div>
       </div>
     </div>
   </nav>
